@@ -5,7 +5,7 @@ const createTaskHtml = (id, taskTitle, description, assignedTo, dueDate, taskSta
     <li class="list-group-item" data-task-id="${id}">
         <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
             <h5>${taskTitle}</h5>
-            <span class="badge badge-danger bg-primary">${taskStatus}</span>
+            <span class="status badge badge-danger bg-danger">${taskStatus}</span>
         </div>
         <div class="d-flex w-100 mb-3 justify-content-between">
             <small>Assigned To: ${assignedTo}</small>
@@ -22,13 +22,13 @@ const createTaskHtml = (id, taskTitle, description, assignedTo, dueDate, taskSta
 }
 
 class TaskManager {
-    constructor(tasks, currentId) {
+    constructor() {
         this.tasks = [];
         this.currentId = 0;
     }
 
-    addTask(taskTitle, description, assignedTo, dueDate, taskStatus = "TODO") {
-        this.tasks.push({ "taskTitle": taskTitle, "description": description, "assignedTo": assignedTo, "dueDate": dueDate, "taskStatus": taskStatus, "id": this.currentId });
+    addTask(taskTitle, description, assignedTo, dueDate, taskStatus = 'TODO') {
+        this.tasks.push({ 'id': this.currentId, 'taskTitle': taskTitle, 'description': description, 'assignedTo': assignedTo, 'dueDate': dueDate, 'taskStatus': taskStatus });
         this.currentId++
     }
 

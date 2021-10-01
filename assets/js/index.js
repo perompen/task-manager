@@ -6,8 +6,6 @@ if (Firstchild.tasks.length !== null) {
 }
 
 const validFormValidInput = () => {
-
-
     const tasks = document.querySelector('#task');
     let getTasks = tasks.value;
 
@@ -36,20 +34,18 @@ const validFormValidInput = () => {
     getDuedates = "";
 }
 
-
-
-//Event Target Retrieval
+//Event target retrieval
 const submitbuttonEL = document.getElementById('submitbutton');
-//Event Listener/Handler for Validation Form
+
+//Event listener/handler for validation form
 submitbuttonEL.addEventListener('click', validFormValidInput);
 
-//Mark as Done Button Functionality
-//Get Event Target - our ul with id task-list
+//Get event target - our ul with id task-list
 const taskListEl = document.querySelector('#task-list');
 
-//Add Event Listener
+//Add event listener
 taskListEl.addEventListener('click', (event) => {
-    //Variable to hold array of tasks that have Mark as Done clicked
+    //Variable to hold array of tasks that have mark as done clicked
     if (event.target.classList.contains('done-button')) {
         let parentTask = event.target.parentNode.parentNode;
         const taskId = Number(parentTask.dataset.taskId);

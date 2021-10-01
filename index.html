@@ -2,22 +2,23 @@
 <html lang="en">
 
 <head>
+    <!-- BOOTSTRAP -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <!-- CSS -->
     <link href="assets/css/styles.css" rel="stylesheet" />
-    <title>My To Do List</title>
+    <title>Task Manager</title>
 </head>
 
 <body>
     <div class="container-fluid">
+        <!-- HEADER -->
         <div class="jumbotron page-header">
-            <h2 class="titleheader" style="margin:5px">My To Do List</h2>
-            <!-- <img src="assets/img/HPY.PNG" class="image" alt="Logo with cartoon images of creators"> -->
         </div>
-
-
+        <h2 class="titleheader" style="margin:5px">Task Manager</h2>
+        <!-- FORM -->
         <div class="formdiv">
             <form class="center-form justify-content-center col-md-6">
                 <div class="form-group">
@@ -36,23 +37,27 @@
                     <label for="duedate">Due Date:</label>
                     <input type="date" id="duedate" class="form-control" placeholder="Due date">
                 </div>
+                <!-- BUTTON -->
                 <div class="row">
                     <div class="btn btn-block">
                         <button type="button" id="submitbutton" class="btn btn-primary">Add Task</button>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
-
-
-    </div>
-
+    <!-- RENDER -->
     <div class="tasks container">
         <ul class="list-group list-group-flush" id="task-list">
         </ul>
     </div>
-
+    <!-- FOOTER -->
+    <footer class="footer">
+        &#10096;/ Coded By: Hector, Perom, & Yannick &#10097;
+    </footer>
+    <!-- JAVASCRIPT -->
     <script src="assets/js/taskmanager.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
+</html>

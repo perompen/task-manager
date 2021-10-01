@@ -7,30 +7,28 @@ body {
     margin: 0;
 }
 
-.center-form {
-    background-color: white;
-    border-radius: 5px;
-}
-
-.titleheader {
-    text-align: center;
-}
-
 .container {
     /* background-color: lightcoral; */
     width: 500px;
     height: auto;
-
 }
 
-/* .delete-button {
-    border-radius: 5px;
-    background-color: darkcyan;
-    height: 35px;
-    width: 50px;
-} */
+.jumbotron {
+    background-image: url("/assets/img/HPY.PNG");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+.titleheader {
+    text-align: center;
+    font-weight: bold;
+}
 
 .center-form {
+    background-color: white;
+    border-radius: 5px;
     margin: auto;
 }
 
@@ -56,9 +54,29 @@ li.list-group-item {
     border-radius: 5px !important;
 }
 
+.status[data-status="to do"]:before {
+    color : red;
+}
+
+.status[data-status="done"]:after {
+    color : green;
+}
+
 .description {
     font-size: 20px;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 15px;
 }
+
+.footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .delete-button {
+    border-radius: 5px;
+    background-color: darkcyan;
+    height: 35px;
+    width: 50px;
+} */

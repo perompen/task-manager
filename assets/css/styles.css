@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(225, 225, 238);
+    margin: 0;
+}
+
+.center-form {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.titleheader {
+    text-align: center;
+}
+
+.container {
+    /* background-color: lightcoral; */
+    width: 500px;
+    height: auto;
+
+}
+
+/* .delete-button {
+    border-radius: 5px;
+    background-color: darkcyan;
+    height: 35px;
+    width: 50px;
+} */
+
+.center-form {
+    margin: auto;
+}
+
+.form-group {
+    margin: 10px;
+    /* background-color:darkcyan; */
+}
+
+.row {
+    margin: 10px;
+    /* background-color: blue; */
+
+}
+
+.btn {
+    width: 100%;
+    margin: 15px 0;
+}
+
+li.list-group-item {
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px !important;
+}
+
+.description {
+    font-size: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+}

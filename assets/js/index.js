@@ -1,6 +1,6 @@
 const Firstchild = new TaskManager();
 
-if (Firstchild.tasks.length !== null) {
+if (Firstchild.tasks !== null) {
     Firstchild.load();
     Firstchild.render();
 }

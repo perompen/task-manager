@@ -1,5 +1,7 @@
 // const { builtinModules } = require("module");
 
+
+//HTML template literal that gets rendered using JS 
 const createTaskHtml = (id, taskTitle, description, assignedTo, dueDate, taskStatus) => {
     const html = `
     <li class="list-group-item" data-task-id="${id}">
@@ -21,17 +23,20 @@ const createTaskHtml = (id, taskTitle, description, assignedTo, dueDate, taskSta
     return html;
 }
 
+//Class for task manager; this.tasks set to empty array, this.currentId set to 0
 class TaskManager {
     constructor() {
         this.tasks = [];
         this.currentId = 0;
     }
 
+    //Add task function; pushes tasks to template literal, this.currentId increments each task
     addTask(taskTitle, description, assignedTo, dueDate, taskStatus = 'TODO') {
         this.tasks.push({ 'id': this.currentId, 'taskTitle': taskTitle, 'description': description, 'assignedTo': assignedTo, 'dueDate': dueDate, 'taskStatus': taskStatus });
         this.currentId++
     }
 
+    //Render function; for look to look though this.tasks and renders
     render() {
         clearBox();
         const tasksHtmlList = [];
@@ -51,6 +56,8 @@ class TaskManager {
         element.innerHTML = tasksHtml;
     }
 
+
+    //For loop to look though this.tasks 
     getTaskById(taskId) {
         let foundTask;
         for (let i = 0; i < this.tasks.length; i++) {
@@ -62,6 +69,7 @@ class TaskManager {
         return foundTask;
     }
 
+    //Saves to local storage
     save() {
         const tasksJson = JSON.stringify(this.tasks);
         localStorage.setItem('tasks', tasksJson);
@@ -69,6 +77,7 @@ class TaskManager {
         localStorage.setItem('currentId', currentId);
     }
 
+    //Loads to local storage
     load() {
         const tasks = localStorage.getItem('tasks');
         this.tasks = JSON.parse(tasks);
@@ -76,6 +85,7 @@ class TaskManager {
         this.currentId = Number(currentId);
     }
 
+    //Deletes task
     delete(taskId) {
         const newTasks = [];
         for (let i = 0; i < this.tasks.length; i++) {
@@ -89,6 +99,7 @@ class TaskManager {
 
 }
 
+//Clear box function; replaces HTML
 const clearBox = () => {
     document.getElementById('task-list').innerHTML = '';
 }

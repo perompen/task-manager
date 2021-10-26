@@ -1,10 +1,5 @@
 const Firstchild = new TaskManager();
 
-if (Firstchild.tasks !== null) {
-    Firstchild.load();
-    Firstchild.render();
-}
-
 const validFormValidInput = () => {
     const tasks = document.querySelector('#task');
     let getTasks = tasks.value;
@@ -33,6 +28,9 @@ const validFormValidInput = () => {
     getUsers = "";
     getDuedates = "";
 }
+
+Firstchild.load();
+Firstchild.render();
 
 //Event target retrieval
 const submitbuttonEL = document.getElementById('submitbutton');

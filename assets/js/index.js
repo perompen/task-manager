@@ -1,7 +1,9 @@
 const Firstchild = new TaskManager();
 
+async function myFunction() {
     Firstchild.load();
     Firstchild.render();
+}
 
 const validFormValidInput = () => {
     const tasks = document.querySelector('#task');
